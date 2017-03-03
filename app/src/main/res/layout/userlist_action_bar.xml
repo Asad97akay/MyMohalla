@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/grayactionbar"
+    >
+
+    <com.example.samama.mymohalla.myMohallaTextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#fff"
+        android:text="@string/chatactionbar"
+        android:textSize="30sp"
+        android:layout_toEndOf="@+id/imageView1"
+        android:layout_toRightOf="@+id/imageView1"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/homeicon"
+        />
+
+</RelativeLayout>

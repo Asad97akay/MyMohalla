@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDarkRegAct">
+
+    <com.example.samama.mymohalla.myMohallaTextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="Username"
+        android:layout_toEndOf="@+id/buddy_dp_actionbar"
+        android:layout_toRightOf="@+id/buddy_dp_actionbar"
+        android:layout_marginLeft="10dp"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+        android:id="@+id/buddy_dp_actionbar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/userdp2"
+        app:hasBorder="false"/>
+
+</RelativeLayout>

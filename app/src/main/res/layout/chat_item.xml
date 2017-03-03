@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/userdp"
+        android:padding="5dp"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/profilepicture"
+        app:hasBorder="false"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp">
+
+        <com.example.samama.mymohalla.myMohallaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="20sp"
+            android:textColor="@color/usernameBlue"
+            android:id="@+id/textView"
+            android:drawablePadding="10dp"
+            />
+        <com.example.samama.mymohalla.myMohallaTextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/message"
+            android:drawablePadding="10dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.example.samama.mymohalla.myMohallaTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:gravity="end|center_vertical"
+            android:id="@+id/time"/>
+    </LinearLayout>
+
+</LinearLayout>

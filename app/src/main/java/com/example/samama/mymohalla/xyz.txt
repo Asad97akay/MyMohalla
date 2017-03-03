@@ -1,0 +1,77 @@
+package com.example.samama.mymohalla;
+
+import android.content.Intent;
+import android.graphics.Typeface;
+import android.media.Image;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.vansuita.pickimage.PickImageDialog;
+import com.vansuita.pickimage.PickSetup;
+import com.vansuita.pickimage.bean.PickResult;
+import com.vansuita.pickimage.listeners.IPickResult;
+
+import org.w3c.dom.Text;
+
+import static android.view.View.GONE;
+
+public class RegisterActivity extends AppCompatActivity{
+
+    TextView registration, locationTextView;
+    ImageView male, female, profilePicture;
+    boolean maleCheck, femaleCheck;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_register);
+
+        registration = (TextView) findViewById(R.id.registration);
+        locationTextView = (TextView) findViewById(R.id.locationTextView);
+        profilePicture = (ImageView) findViewById(R.id.profilepicture);
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/breeserif.otf");
+        registration.setTypeface(custom_font);
+        locationTextView.setTypeface(custom_font);
+
+        profilePicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickImageDialog.on(getSupportFragmentManager(), new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult r) {
+                        if(r.getError() == null){
+                            Log.d("IMAGE", "GOT IT");
+                            profilePicture.setImageBitmap(r.getBitmap());
+
+                            //If you want the Uri.
+                            //Mandatory to refresh image from Uri.
+                            profilePicture.setImageURI(null);
+
+                            //Setting the real returned image.
+                            profilePicture.setImageURI(r.getUri());
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+    public void maleSelect(View view) {
+        maleCheck = true;
+        femaleCheck = false;
+        male.setBackgroundResource(R.drawable.maletag);
+        female.setBackgroundResource(R.drawable.female);
+    }
+
+    public void femaleSelect(View view) {
+        femaleCheck = true;
+        maleCheck = false;
+        male.setBackgroundResource(R.drawable.male);
+        female.setBackgroundResource(R.drawable.femaletag);
+    }
+
+}

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "578303482442",
+    "firebase_url": "https://my-mohalla.firebaseio.com",
+    "project_id": "my-mohalla",
+    "storage_bucket": "my-mohalla.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578303482442:android:3a40716967f1b72f",
+        "android_client_info": {
+          "package_name": "com.example.samama.mymohalla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578303482442-cu7c9bhs7v3hsvl4v30vinqvtjr2vasj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrFjO2G0Mlr2NdS1xhMLCHbNDVx0Z7JNg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

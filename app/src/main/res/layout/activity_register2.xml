@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/splashbg"
+    android:orientation="vertical">
+
+    <com.example.samama.mymohalla.myMohallaTextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:text="Registration"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:id="@+id/registration"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    tools:context="com.example.samama.mymohalla.Register2Activity">
+
+    <com.example.samama.mymohalla.myMohallaTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:id="@+id/fullnameTextView"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_alignStart="@+id/fullnameImageView"
+        android:layout_alignLeft="@+id/fullnameImageView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/registeredittext"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/fullnameImageView"
+        android:layout_below="@+id/fullnameTextView"/>
+
+    <com.example.samama.mymohalla.myMohallaEditText
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:hint="Enter your full name"
+        android:inputType="textCapWords"
+        android:textColor="@color/loginDetais"
+        android:textColorHint="@color/loginDetais"
+        android:layout_alignLeft="@+id/fullnameImageView"
+        android:layout_alignStart="@+id/fullnameImageView"
+        android:layout_alignBottom="@+id/fullnameImageView"
+        android:layout_alignEnd="@+id/fullnameImageView"
+        android:layout_alignRight="@+id/fullnameImageView"
+        android:id="@+id/fullnameEditText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/transparent"
+        android:maxLines="1"/>
+</RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        tools:context="com.example.samama.mymohalla.Register2Activity">
+
+        <com.example.samama.mymohalla.myMohallaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:id="@+id/passwordTextView"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_alignStart="@+id/passwordImageView"
+            android:layout_alignLeft="@+id/passwordImageView" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/registeredittext"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/passwordImageView"
+            android:layout_below="@+id/passwordTextView"/>
+
+        <com.example.samama.mymohalla.myMohallaEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Type your password"
+            android:inputType="textPassword"
+            android:textColor="@color/loginDetais"
+            android:textColorHint="@color/loginDetais"
+            android:layout_alignLeft="@+id/passwordImageView"
+            android:layout_alignStart="@+id/passwordImageView"
+            android:layout_alignBottom="@+id/passwordImageView"
+            android:layout_alignEnd="@+id/passwordImageView"
+            android:layout_alignRight="@+id/passwordImageView"
+            android:id="@+id/passwordEditText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/transparent"/>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    tools:context="com.example.samama.mymohalla.Register2Activity">
+
+    <com.example.samama.mymohalla.myMohallaTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:id="@+id/emailTextView"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_alignStart="@+id/emailImageView"
+        android:layout_alignLeft="@+id/emailImageView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/registeredittext"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/emailImageView"
+        android:layout_below="@+id/emailTextView"/>
+
+    <com.example.samama.mymohalla.myMohallaEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Your email goes here"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/loginDetais"
+        android:textColorHint="@color/loginDetais"
+        android:layout_alignLeft="@+id/emailImageView"
+        android:layout_alignStart="@+id/emailImageView"
+        android:layout_alignBottom="@+id/emailImageView"
+        android:layout_alignEnd="@+id/emailImageView"
+        android:layout_alignRight="@+id/emailImageView"
+        android:id="@+id/emailEditText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/transparent"/>
+</RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        tools:context="com.example.samama.mymohalla.Register2Activity">
+
+        <com.example.samama.mymohalla.myMohallaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C-NIC"
+            android:id="@+id/cnicTextView"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_alignStart="@+id/cnicImageView"
+            android:layout_alignLeft="@+id/cnicImageView" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/registeredittext"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/cnicImageView"
+            android:layout_below="@+id/cnicTextView"
+            />
+
+        <com.example.samama.mymohalla.myMohallaEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/loginDetais"
+            android:layout_alignLeft="@+id/cnicImageView"
+            android:layout_alignStart="@+id/cnicImageView"
+            android:layout_alignBottom="@+id/cnicImageView"
+            android:layout_alignRight="@+id/cnicImageView"
+            android:layout_alignEnd="@+id/cnicImageView"
+            android:id="@+id/cnicEditText"
+            android:textColorHint="@color/loginDetais"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/transparent"/>
+    </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/rippleRegister"
+                    app:mrl_rippleOverlay="true"
+                    app:mrl_rippleRoundedCorners="20dp"
+                    app:mrl_rippleDuration="300"
+                    app:mrl_rippleDelayClick="false"
+                    android:layout_below="@id/whitebar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentBottom="true">
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:src="@drawable/loginbigbtn"
+                            android:id="@+id/registerBtn"
+                            android:onClick="registerOnClick"
+                            />
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.example.samama.mymohalla.myMohallaTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:id="@+id/registerTxt"
+                    android:textSize="25sp"
+                    android:text="@string/register_btn"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:layout_alignTop="@id/rippleRegister"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_crop_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.samama.mymohalla.CropImageActivity"
+    android:background="@color/black">
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:src="@drawable/whitebar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/bluebarCancel"
+        />
+
+    <com.example.samama.mymohalla.myMohallaTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CANCEL"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_alignBottom="@+id/bluebarCancel"
+        android:layout_alignTop="@id/bluebarCancel"
+        android:layout_alignRight="@id/bluebarCancel"
+        android:layout_alignLeft="@id/bluebarCancel"
+        android:gravity="center_horizontal|center_vertical"
+        android:id="@+id/myMohallaTextView"
+        android:onClick="cancelOnClick"/>
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:src="@drawable/bluebar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/bluebarCrop"
+        />
+
+    <com.example.samama.mymohalla.myMohallaTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CROP"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_alignBottom="@+id/bluebarCrop"
+        android:layout_alignTop="@id/bluebarCrop"
+        android:layout_alignRight="@id/bluebarCrop"
+        android:layout_alignLeft="@id/bluebarCrop"
+        android:gravity="center_horizontal|center_vertical"
+        android:id="@+id/myMohallaTextView1"
+        android:onClick="cropOnClick"/>
+
+    <com.theartofdev.edmodo.cropper.CropImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/cropImageView"
+        android:layout_above="@+id/bluebarCancel"
+        />
+
+</RelativeLayout>

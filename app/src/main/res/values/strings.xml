@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">MyMohalla</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="type_msg">Write a message</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="or">or</string>
+    <string name="email">Email</string>
+    <string name="displayName">Display Name</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="log_in">Log in</string>
+    <string name="forgot_my_pwd">I’ve forgotten my password?</string>
+    <string name="my_chats">My Chats</string>
+    <string name="all_chats">All Chats</string>
+    <string name="search">Search</string>
+    <string name="to">To:</string>
+    <string name="edit">Edit</string>
+    <string name="new_chat">Start a new chat!</string>
+    <string name="alert_wait">Please wait...</string>
+    <string name="compressing_image">Applying image compression...</string>
+    <string name="err_fields_empty">Please fill all the fields.</string>
+    <string name="err_upload_image">Please upload a profile picture.</string>
+    <string name="err_enter_location">Please enter your location.</string>
+    <string name="err_singup">Error occurred while signup:</string>
+    <string name="err_login">Error occurred while login:</string>
+    <string name="err_users">Error occurred while finding users:</string>
+    <string name="alert_loading">Loading...</string>
+    <string name="msg_no_user_found">No users found for chat!</string>
+    <string name="delivered_text">Delivered</string>
+    <string name="sending_text">Sending...</string>
+    <string name="failed_text">Failed</string>
+    <string name="chatactionbar">Chat</string>
+    <string name="select_location">Select Location</string>
+    <string name="continuetext">CONTINUE</string>
+    <string name="register_btn">REGISTER</string>
+    <string name="ok">Ok</string>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llaa"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="right">
+
+    <LinearLayout
+            android:id="@+id/v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/chatbubbleblue4"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/pad_5dp"
+            android:paddingLeft="@dimen/pad_15dp"
+            android:paddingRight="@dimen/pad_chat_item"
+            android:layout_marginRight="10dp"
+            android:paddingTop="@dimen/pad_5dp">
+
+            <com.example.samama.mymohalla.myMohallaTextView
+                android:id="@+id/lbl1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_13sp" />
+            <com.example.samama.mymohalla.myMohallaTextView
+                android:id="@+id/lbl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sd"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_14sp"
+                android:maxLines="4"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="5dp">
+        <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/userdp"
+            app:hasBorder="false"/>
+
+        <com.example.samama.mymohalla.myMohallaTextView
+            android:id="@+id/lbl3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x"
+            android:textColor="@color/main_color_gray"
+            android:textSize="@dimen/txt_14sp"
+            android:layout_alignRight="@+id/userdp"
+            android:layout_below="@+id/userdp"
+            android:gravity="left"
+            android:layout_gravity="left"
+            />
+    </LinearLayout>
+
+</LinearLayout>

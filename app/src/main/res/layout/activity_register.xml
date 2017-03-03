@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.samama.mymohalla.RegisterActivity"
+    android:background="@drawable/splashbg">
+
+    <com.example.samama.mymohalla.myMohallaTextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Registration"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:id="@+id/registration"
+        />
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/rippleProfilePicture"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="26dp"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleRoundedCorners="14dp"
+        android:layout_below="@+id/registration"
+        android:layout_centerHorizontal="true"
+        app:mrl_rippleDuration="300"
+        app:mrl_rippleDelayClick="false">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/profilepicture"
+            android:id="@+id/profilepicture"
+            />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rippleProfilePicture"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/linear1">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="100dp"
+            android:src="@drawable/male"
+            android:layout_weight="1"
+            android:id="@+id/maleTag"
+            />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="100dp"
+            android:src="@drawable/female"
+            android:layout_weight="1"
+            android:id="@+id/femaleTag"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/linear1"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/whitebar"
+        android:layout_marginTop="30dp"
+        android:id="@+id/whitebar"/>
+
+    <com.example.samama.mymohalla.myMohallaTextView
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/whitebar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/select_location"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/locationTextView"
+        android:textColor="@color/loginDetais"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        />
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/whitebar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rippleContinue"
+        app:mrl_rippleDuration="300"
+        app:mrl_rippleDelayClick="false"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleRoundedCorners="20dp">
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/loginbigbtn"
+        android:id="@+id/continueBtn"
+        android:onClick="continueOnClick"/>
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.example.samama.mymohalla.myMohallaTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/continueTxt"
+        android:textSize="25sp"
+        android:text="@string/continuetext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_alignTop="@id/rippleContinue"/>
+
+</RelativeLayout>

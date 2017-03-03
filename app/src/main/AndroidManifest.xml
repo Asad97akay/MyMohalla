@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.samama.mymohalla">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        tools:replace="android:allowBackup"
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_key"/>
+
+        <activity android:name=".LoginActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:theme="@style/RegActTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MapsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ForgotPasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".UserList"
+            android:theme="@style/UserlistActTheme" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Chat"
+            android:theme="@style/ChatActTheme" android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity android:name=".Register2Activity" android:screenOrientation="portrait" android:theme="@style/RegActTheme"/>
+        <activity android:name=".CropImageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

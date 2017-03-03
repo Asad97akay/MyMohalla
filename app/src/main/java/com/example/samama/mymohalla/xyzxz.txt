@@ -1,0 +1,118 @@
+package com.example.samama.mymohalla;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Typeface;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import com.vansuita.pickimage.PickImageDialog;
+import com.vansuita.pickimage.PickSetup;
+import com.vansuita.pickimage.bean.PickResult;
+import com.vansuita.pickimage.listeners.IPickResult;
+
+
+
+public class RegisterActivity extends AppCompatActivity implements IPickResult {
+    private static final int REQUEST_CODE_YOUR = 123;
+    boolean isLocationReady = false;
+    TextView registration, uploadText, locationTextView;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_register);
+        registration = (TextView) findViewById(R.id.registration);
+        locationTextView = (TextView) findViewById(R.id.locationTextView);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/breeserif.otf");
+        registration.setTypeface(custom_font);
+        uploadText.setTypeface(custom_font);
+        locationTextView.setTypeface(custom_font);
+
+
+        locationTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, MapsActivity.class);
+                startActivityForResult(intent, REQUEST_CODE_YOUR);
+
+
+            }
+        });
+    }
+
+
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+            if (requestCode == REQUEST_CODE_YOUR) {
+
+                if (resultCode == Activity.RESULT_OK) {
+
+                    String latitude = data.getStringExtra("lat");
+                    String longitude = data.getStringExtra("lng");
+                    String GPS = latitude + "," + longitude;
+                    locationTextView.setText(GPS);
+                    isLocationReady = true;
+                }
+
+            }
+        }
+
+    public void imageUpload(View view) {
+        createImageStep((ImageView) view);
+    }
+
+    @Override
+    public void onPickResult(PickResult r) {
+        if (r.getError() == null) {
+            ImageView imageView = ((ImageView) findViewById(R.id.profilepicture));
+
+            //If you want the Bitmap.
+            imageView.setImageBitmap(r.getBitmap());
+
+            //If you want the Uri.
+            //Mandatory to refresh image from Uri.
+            imageView.setImageURI(null);
+
+            //Setting the real returned image.
+            imageView.setImageURI(r.getUri());
+
+            //Image path.
+            r.getPath();
+        } else {
+            //Handle possible errors
+            //TODO: do what you have to do with r.getError();
+        }
+    }
+
+    private View createImageStep(final ImageView iv) {
+        iv.setMinimumHeight(180);
+        iv.setMaxHeight(180);
+        iv.setMaxWidth(180);
+        iv.setMinimumHeight(180);
+
+        iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickImageDialog.on(getSupportFragmentManager(), new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult r) {
+                        if(r.getError() == null){
+                            Log.d("IMAGE", "GOT IT");
+                            iv.setImageBitmap(r.getBitmap());
+                        }
+                    }
+                });
+            }
+        });
+
+        return iv;
+    }
+}
+
+
+
+
